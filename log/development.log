@@ -818,3 +818,89 @@ Migrating to AddForeignKeyToBillexpenses (20200507055247)
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mBillexpense Load (0.3ms)[0m  [1m[34mSELECT "billexpenses".* FROM "billexpenses" LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mBankinformation Load (1.5ms)[0m  [1m[34mSELECT "bankinformations".* FROM "bankinformations" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["firstname", "John"], ["lastname", "Doe"], ["created_at", "2020-05-07 06:07:43.526717"], ["updated_at", "2020-05-07 06:07:43.526717"]]
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["firstname", "Ira"], ["lastname", "Herman"], ["created_at", "2020-05-07 06:07:43.533845"], ["updated_at", "2020-05-07 06:07:43.533845"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBankinformation Create (0.4ms)[0m  [1m[32mINSERT INTO "bankinformations" ("bankname", "accountnumber", "routingnumber", "bankiban", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["bankname", "ABG SUNDAL COLLIER LIMITED"], ["accountnumber", 1868448328], ["routingnumber", "267551567"], ["bankiban", "GB58PEDB59383682527787"], ["created_at", "2020-05-07 06:07:43.605435"], ["updated_at", "2020-05-07 06:07:43.605435"], ["user_id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["firstname", "John"], ["lastname", "Doe"], ["created_at", "2020-05-07 06:11:09.403474"], ["updated_at", "2020-05-07 06:11:09.403474"]]
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("firstname", "lastname", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["firstname", "Ira"], ["lastname", "Herman"], ["created_at", "2020-05-07 06:11:09.415528"], ["updated_at", "2020-05-07 06:11:09.415528"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBankinformation Create (0.3ms)[0m  [1m[32mINSERT INTO "bankinformations" ("bankname", "accountnumber", "routingnumber", "bankiban", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["bankname", "ABBEY LIFE"], ["accountnumber", 68822], ["routingnumber", "713629529"], ["bankiban", "GB22RDDQ17665375100808"], ["created_at", "2020-05-07 06:11:09.510081"], ["updated_at", "2020-05-07 06:11:09.510081"], ["user_id", 1]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBankinformation Create (0.4ms)[0m  [1m[32mINSERT INTO "bankinformations" ("bankname", "accountnumber", "routingnumber", "bankiban", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["bankname", "ABINGWORTH MANAGEMENT LIMITED"], ["accountnumber", 11320], ["routingnumber", "616903067"], ["bankiban", "GB24KVXC20184084061552"], ["created_at", "2020-05-07 06:11:09.522253"], ["updated_at", "2020-05-07 06:11:09.522253"], ["user_id", 1]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBankinformation Create (0.4ms)[0m  [1m[32mINSERT INTO "bankinformations" ("bankname", "accountnumber", "routingnumber", "bankiban", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["bankname", "PGMS (GLASGOW) LIMITED"], ["accountnumber", 37525], ["routingnumber", "644288055"], ["bankiban", "GB47SURR19243560995818"], ["created_at", "2020-05-07 06:11:09.530313"], ["updated_at", "2020-05-07 06:11:09.530313"], ["user_id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBankinformation Create (0.3ms)[0m  [1m[32mINSERT INTO "bankinformations" ("bankname", "accountnumber", "routingnumber", "bankiban", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["bankname", "UBS CLEARING AND EXECUTION SERVICES LIMITED"], ["accountnumber", 6825], ["routingnumber", "122109025"], ["bankiban", "GB48GCEH39286809325882"], ["created_at", "2020-05-07 06:11:09.536876"], ["updated_at", "2020-05-07 06:11:09.536876"], ["user_id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCreditcard Create (0.7ms)[0m  [1m[32mINSERT INTO "creditcards" ("creditcard_company", "merchant_name", "amount", "creditcard_number", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["creditcard_company", "Discovery"], ["merchant_name", "Casey Gasstation"], ["amount", "40.0"], ["creditcard_number", "6771-8970-0211-9819"], ["created_at", "2020-05-07 06:11:09.553771"], ["updated_at", "2020-05-07 06:11:09.553771"], ["user_id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCreditcard Create (0.3ms)[0m  [1m[32mINSERT INTO "creditcards" ("creditcard_company", "merchant_name", "amount", "creditcard_number", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["creditcard_company", "American Express"], ["merchant_name", "Walmart Store"], ["amount", "540.0"], ["creditcard_number", "6771-8954-3715-7123"], ["created_at", "2020-05-07 06:11:09.561068"], ["updated_at", "2020-05-07 06:11:09.561068"], ["user_id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCreditcard Create (0.2ms)[0m  [1m[32mINSERT INTO "creditcards" ("creditcard_company", "merchant_name", "amount", "creditcard_number", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["creditcard_company", "American Airlines"], ["merchant_name", "priceline"], ["amount", "200.0"], ["creditcard_number", "6771-8936-9516-5284"], ["created_at", "2020-05-07 06:11:09.566468"], ["updated_at", "2020-05-07 06:11:09.566468"], ["user_id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCreditcard Create (0.2ms)[0m  [1m[32mINSERT INTO "creditcards" ("creditcard_company", "merchant_name", "amount", "creditcard_number", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["creditcard_company", "City Bank"], ["merchant_name", "Nike.com"], ["amount", "120.0"], ["creditcard_number", "5251-5613-8524-3718"], ["created_at", "2020-05-07 06:11:09.570840"], ["updated_at", "2020-05-07 06:11:09.570840"], ["user_id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBillexpense Create (0.4ms)[0m  [1m[32mINSERT INTO "billexpenses" ("billtype", "companyname", "amount", "due_date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["billtype", "Water"], ["companyname", "Fayetteville Water"], ["amount", "40.0"], ["due_date", "2020-05-06"], ["created_at", "2020-05-07 06:11:09.593724"], ["updated_at", "2020-05-07 06:11:09.593724"], ["user_id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBillexpense Create (0.3ms)[0m  [1m[32mINSERT INTO "billexpenses" ("billtype", "companyname", "amount", "due_date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["billtype", "Gas"], ["companyname", "Swepco"], ["amount", "150.0"], ["due_date", "2020-05-06"], ["created_at", "2020-05-07 06:11:09.599736"], ["updated_at", "2020-05-07 06:11:09.599736"], ["user_id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBillexpense Create (0.2ms)[0m  [1m[32mINSERT INTO "billexpenses" ("billtype", "companyname", "amount", "due_date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["billtype", "Internet"], ["companyname", "Cox"], ["amount", "90.0"], ["due_date", "2020-05-06"], ["created_at", "2020-05-07 06:11:09.605075"], ["updated_at", "2020-05-07 06:11:09.605075"], ["user_id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBillexpense Create (0.2ms)[0m  [1m[32mINSERT INTO "billexpenses" ("billtype", "companyname", "amount", "due_date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["billtype", "Insurance"], ["companyname", "State farm"], ["amount", "200.0"], ["due_date", "2020-05-07"], ["created_at", "2020-05-07 06:11:09.610286"], ["updated_at", "2020-05-07 06:11:09.610286"], ["user_id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBillexpense Create (0.2ms)[0m  [1m[32mINSERT INTO "billexpenses" ("billtype", "companyname", "amount", "due_date", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["billtype", "Trash"], ["companyname", "Fayetteville  Trash"], ["amount", "10.0"], ["due_date", "2020-05-06"], ["created_at", "2020-05-07 06:11:09.614897"], ["updated_at", "2020-05-07 06:11:09.614897"], ["user_id", 1]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mBankinformation Load (0.8ms)[0m  [1m[34mSELECT "bankinformations".* FROM "bankinformations" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCreditcard Load (0.8ms)[0m  [1m[34mSELECT "creditcards".* FROM "creditcards" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mBillexpense Load (0.9ms)[0m  [1m[34mSELECT "billexpenses".* FROM "billexpenses" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mBankinformation Load (0.9ms)[0m  [1m[34mSELECT "bankinformations".* FROM "bankinformations" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mBankinformation Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "bankinformations" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBankinformation Load (0.7ms)[0m  [1m[34mSELECT "bankinformations".* FROM "bankinformations"[0m
+  [1m[36mCreditcard Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "creditcards" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCreditcard Load (0.7ms)[0m  [1m[34mSELECT "creditcards".* FROM "creditcards"[0m
+  [1m[36mBillexpense Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "billexpenses" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mBillexpense Load (0.6ms)[0m  [1m[34mSELECT "billexpenses".* FROM "billexpenses"[0m
