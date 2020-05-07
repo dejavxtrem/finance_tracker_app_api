@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  billtype: MyString
+  companyname: MyString
+  amount: 9.99
+  due_date: MyString
+
+two:
+  billtype: MyString
+  companyname: MyString
+  amount: 9.99
+  due_date: MyString
