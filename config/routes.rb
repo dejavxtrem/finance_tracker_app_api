@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :billexpenses
+  resources :billexpenses, only: [:index, :show, :create]
   resources :creditcards
   resources :bankinformations
   resources :users

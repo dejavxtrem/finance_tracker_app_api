@@ -904,3 +904,62 @@ Migrating to AddForeignKeyToBillexpenses (20200507055247)
   [1m[36mCreditcard Load (0.7ms)[0m  [1m[34mSELECT "creditcards".* FROM "creditcards"[0m
   [1m[36mBillexpense Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "billexpenses" LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mBillexpense Load (0.6ms)[0m  [1m[34mSELECT "billexpenses".* FROM "billexpenses"[0m
+Started GET "/bankinformations" for ::1 at 2020-05-07 01:20:59 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BankinformationsController#index as HTML
+  [1m[36mBankinformation Load (0.4ms)[0m  [1m[34mSELECT "bankinformations".* FROM "bankinformations"[0m
+  ↳ app/controllers/bankinformations_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 13.3ms | ActiveRecord: 3.6ms | Allocations: 9119)
+
+
+Started GET "/creditcards" for ::1 at 2020-05-07 01:21:15 -0500
+Processing by CreditcardsController#index as HTML
+  [1m[36mCreditcard Load (0.6ms)[0m  [1m[34mSELECT "creditcards".* FROM "creditcards"[0m
+  ↳ app/controllers/creditcards_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 14.1ms | ActiveRecord: 3.7ms | Allocations: 7741)
+
+
+Started GET "/users" for ::1 at 2020-05-07 01:21:25 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 6.5ms | ActiveRecord: 2.8ms | Allocations: 7303)
+
+
+Started GET "/billexpenses" for ::1 at 2020-05-07 01:22:09 -0500
+Processing by BillexpensesController#index as HTML
+  [1m[36mBillexpense Load (0.6ms)[0m  [1m[34mSELECT "billexpenses".* FROM "billexpenses"[0m
+  ↳ app/controllers/billexpenses_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 12.9ms | ActiveRecord: 4.7ms | Allocations: 7805)
+
+
+Started GET "/billexpenses/1" for ::1 at 2020-05-07 01:26:25 -0500
+Processing by BillexpensesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBillexpense Load (0.3ms)[0m  [1m[34mSELECT "billexpenses".* FROM "billexpenses" WHERE "billexpenses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/billexpenses_controller.rb:44:in `set_billexpense'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 4297)
+
+
+Started GET "/billexpenses/2" for ::1 at 2020-05-07 01:26:36 -0500
+Processing by BillexpensesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBillexpense Load (0.4ms)[0m  [1m[34mSELECT "billexpenses".* FROM "billexpenses" WHERE "billexpenses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/billexpenses_controller.rb:44:in `set_billexpense'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 840)
+
+
+Started GET "/users" for ::1 at 2020-05-07 01:26:53 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1369)
+
+
+Started GET "/billexpenses" for ::1 at 2020-05-07 01:34:34 -0500
+Processing by BillexpensesController#index as HTML
+  [1m[36mBillexpense Load (0.4ms)[0m  [1m[34mSELECT "billexpenses".* FROM "billexpenses"[0m
+  ↳ app/controllers/billexpenses_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.4ms | Allocations: 7814)
+
+

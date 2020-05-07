@@ -1,5 +1,4 @@
 class BillexpensesController < ApplicationController
-  before_action :set_billexpense, only: [:show, :update, :destroy]
 
   # GET /billexpenses
   def index
@@ -25,24 +24,24 @@ class BillexpensesController < ApplicationController
   end
 
   # PATCH/PUT /billexpenses/1
-  def update
-    if @billexpense.update(billexpense_params)
-      render json: @billexpense
-    else
-      render json: @billexpense.errors, status: :unprocessable_entity
-    end
-  end
+  # def update
+  #   if @billexpense.update(billexpense_params)
+  #     render json: @billexpense
+  #   else
+  #     render json: @billexpense.errors, status: :unprocessable_entity
+  #   end
+  # end
 
   # DELETE /billexpenses/1
-  def destroy
-    @billexpense.destroy
-  end
+  # def destroy
+  #   @billexpense.destroy
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_billexpense
-      @billexpense = Billexpense.find(params[:id])
-    end
+    # def set_billexpense
+    #   @billexpense = Billexpense.find(params[:id])
+    # end
 
     # Only allow a trusted parameter "white list" through.
     def billexpense_params
