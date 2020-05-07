@@ -963,3 +963,344 @@ Processing by BillexpensesController#index as HTML
 Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.4ms | Allocations: 7814)
 
 
+Started GET "/" for ::1 at 2020-05-07 14:20:56 -0500
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/dejay/.rbenv/versions/2.5.5/lib/ruby/gems/2.5.0/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/dejay/.rbenv/versions/2.5.5/lib/ruby/gems/2.5.0/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.1ms | Allocations: 458)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 2460)
+
+
+Started GET "/users" for ::1 at 2020-05-07 14:20:59 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+...bankinformations, :creditcards, :billexpenses)
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:27: syntax error, unexpected tREGEXP_BEG, expecting keyword_do or '{' or '('
+  PATCH/PUT /users/1
+            ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:27: syntax error, unexpected tINTEGER, expecting keyword_end
+  PATCH/PUT /users/1
+                   ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:27: syntax error, unexpected tREGEXP_BEG, expecting keyword_do or '{' or '('
+app/controllers/users_controller.rb:27: syntax error, unexpected tINTEGER, expecting keyword_end
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:27: syntax error, unexpected tREGEXP_BEG, expecting keyword_do or '{' or '('
+app/controllers/users_controller.rb:27: syntax error, unexpected tINTEGER, expecting keyword_end
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users" for ::1 at 2020-05-07 14:22:57 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:27: syntax error, unexpected tREGEXP_BEG, expecting keyword_do or '{' or '('
+  PATCH/PUT /users/1
+            ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:27: syntax error, unexpected tINTEGER, expecting keyword_end
+  PATCH/PUT /users/1
+                   ^):
+  
+app/controllers/users_controller.rb:27: syntax error, unexpected tREGEXP_BEG, expecting keyword_do or '{' or '('
+app/controllers/users_controller.rb:27: syntax error, unexpected tINTEGER, expecting keyword_end
+app/controllers/users_controller.rb:27: syntax error, unexpected tREGEXP_BEG, expecting keyword_do or '{' or '('
+app/controllers/users_controller.rb:27: syntax error, unexpected tINTEGER, expecting keyword_end
+Started GET "/users" for ::1 at 2020-05-07 14:34:04 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:27: syntax error, unexpected tREGEXP_BEG, expecting keyword_do or '{' or '('
+  PATCH/PUT /users/1
+            ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:27: syntax error, unexpected tINTEGER, expecting keyword_end
+  PATCH/PUT /users/1
+                   ^):
+  
+app/controllers/users_controller.rb:27: syntax error, unexpected tREGEXP_BEG, expecting keyword_do or '{' or '('
+app/controllers/users_controller.rb:27: syntax error, unexpected tINTEGER, expecting keyword_end
+app/controllers/users_controller.rb:27: syntax error, unexpected tREGEXP_BEG, expecting keyword_do or '{' or '('
+app/controllers/users_controller.rb:27: syntax error, unexpected tINTEGER, expecting keyword_end
+Started GET "/users" for ::1 at 2020-05-07 14:34:18 -0500
+  
+NameError (undefined local variable or method `usersusersusersusersusersusersusers' for UsersController:Class):
+  
+app/controllers/users_controller.rb:15:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/users" for ::1 at 2020-05-07 14:34:35 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:7:in `index'
+Completed 200 OK in 10ms (Views: 4.2ms | ActiveRecord: 3.4ms | Allocations: 7968)
+
+
+Started GET "/users/1" for ::1 at 2020-05-07 14:34:52 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mBankinformation Load (0.4ms)[0m  [1m[34mSELECT "bankinformations".* FROM "bankinformations" WHERE "bankinformations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 3.5ms | Allocations: 14333)
+
+
+Started GET "/users/1" for ::1 at 2020-05-07 14:36:06 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+...bankinformations, :creditcards, :billexpenses)
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1" for ::1 at 2020-05-07 14:37:06 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+...bankinformations, :creditcards)
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/" for ::1 at 2020-05-07 14:41:56 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+...bankinformations, :creditcards)
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/" for ::1 at 2020-05-07 14:45:11 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+...bankinformations, :creditcards)
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1" for ::1 at 2020-05-07 14:45:15 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+...bankinformations, :creditcards)
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1" for ::1 at 2020-05-07 14:46:55 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+...bankinformations, :creditcards)
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1" for ::1 at 2020-05-07 14:47:51 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting ')'
+...n(includes: (:bankinformations, :creditcards))
+...                              ^):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting ')'
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting ')'
+Started GET "/users/1" for ::1 at 2020-05-07 14:49:23 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+...bankinformations, :creditcards)
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1" for ::1 at 2020-05-07 14:58:39 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mBankinformation Load (0.3ms)[0m  [1m[34mSELECT "bankinformations".* FROM "bankinformations" WHERE "bankinformations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 25ms (Views: 0.1ms | ActiveRecord: 6.8ms | Allocations: 14476)
+
+
+Started GET "/users/1" for ::1 at 2020-05-07 14:58:57 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 6380)
+
+
+Started GET "/users/1" for ::1 at 2020-05-07 14:59:23 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+...bankinformations, :creditcards)
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1" for ::1 at 2020-05-07 15:04:53 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+...on(include: {:bankinformations, :creditcards})
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1" for ::1 at 2020-05-07 15:05:06 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+...n(includes: {:bankinformations, :creditcards})
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1" for ::1 at 2020-05-07 15:06:47 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+...on(include: {:bankinformations, :creditcards})
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1" for ::1 at 2020-05-07 15:08:57 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mBankinformation Load (0.2ms)[0m  [1m[34mSELECT "bankinformations".* FROM "bankinformations" WHERE "bankinformations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 4.7ms | Allocations: 14247)
+
+
+Started GET "/users/1" for ::1 at 2020-05-07 15:11:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mBankinformation Load (0.2ms)[0m  [1m[34mSELECT "bankinformations".* FROM "bankinformations" WHERE "bankinformations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 4.2ms | Allocations: 60065)
+
+
+  
+NameError (undefined local variable or method `creditcards' for #<UsersController:0x00007fe55c8a7548>
+Did you mean?  creditcards_url):
+  
+app/controllers/users_controller.rb:13:in `show'
+Started GET "/users/1" for ::1 at 2020-05-07 15:12:05 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mBankinformation Load (0.3ms)[0m  [1m[34mSELECT "bankinformations".* FROM "bankinformations" WHERE "bankinformations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 4.3ms | Allocations: 14247)
+
+
+Started GET "/users/1" for ::1 at 2020-05-07 15:13:10 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ':', expecting ')'
+...r json: @user.to_json(:include: :bankinformations, :creditca...
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/" for ::1 at 2020-05-07 15:13:27 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+...bankinformations, :creditcards)
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1" for ::1 at 2020-05-07 15:13:31 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+...bankinformations, :creditcards)
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1" for ::1 at 2020-05-07 15:17:26 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+...:include => {:bankinformations, :creditcards})
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1" for ::1 at 2020-05-07 15:19:12 -0500
+  
+SyntaxError (/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+...n(include:  {:bankinformations, :creditcards})
+...                              ^
+/home/dejay/Documents/Project4_GA/finance_tracker_app_api/app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/users_controller.rb:13: syntax error, unexpected ',', expecting =>
+app/controllers/users_controller.rb:51: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/users/1" for ::1 at 2020-05-07 15:26:46 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mBankinformation Load (0.2ms)[0m  [1m[34mSELECT "bankinformations".* FROM "bankinformations" WHERE "bankinformations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+  [1m[36mCreditcard Load (0.2ms)[0m  [1m[34mSELECT "creditcards".* FROM "creditcards" WHERE "creditcards"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 29ms (Views: 0.1ms | ActiveRecord: 7.8ms | Allocations: 22448)
+
+
+Started GET "/users/1" for ::1 at 2020-05-07 15:33:44 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12:in `show'
+  [1m[36mBankinformation Load (0.3ms)[0m  [1m[34mSELECT "bankinformations".* FROM "bankinformations" WHERE "bankinformations"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+  [1m[36mCreditcard Load (0.2ms)[0m  [1m[34mSELECT "creditcards".* FROM "creditcards" WHERE "creditcards"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+  [1m[36mBillexpense Load (0.3ms)[0m  [1m[34mSELECT "billexpenses".* FROM "billexpenses" WHERE "billexpenses"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:13:in `show'
+Completed 200 OK in 37ms (Views: 0.1ms | ActiveRecord: 4.7ms | Allocations: 29501)
+
+
