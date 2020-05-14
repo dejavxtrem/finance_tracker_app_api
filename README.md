@@ -17,5 +17,9 @@ One to Many
 * User should be able to view all Expense Transaction
 
 
-
+# Future Improvement
+* Working with React Context fully
+* Finish up CRUD LOGIC
+* Complete styling
+* Chart for Financial Analysis
 
