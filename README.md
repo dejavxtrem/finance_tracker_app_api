@@ -22,4 +22,5 @@ One to Many
 * Finish up CRUD LOGIC
 * Complete styling
 * Chart for Financial Analysis
+* Authentication Login Page
 
