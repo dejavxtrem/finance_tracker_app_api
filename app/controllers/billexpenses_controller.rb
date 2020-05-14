@@ -15,9 +15,10 @@ class BillexpensesController < ApplicationController
   # POST /billexpenses
   def create
     @billexpense = Billexpense.new(billexpense_params)
+    @billexpense.user_id = params[:user_id]
 
     if @billexpense.save
-      render json: @billexpense, status: :created, location: @billexpense
+      render json: @billexpense, status: :created
     else
       render json: @billexpense.errors, status: :unprocessable_entity
     end

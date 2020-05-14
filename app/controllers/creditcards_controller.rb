@@ -16,6 +16,7 @@ class CreditcardsController < ApplicationController
   # POST /creditcards
   def create
     @creditcard = Creditcard.new(creditcard_params)
+    @creditcard.user_id = params[:user_id]
 
     if @creditcard.save
       render json: @creditcard, status: :created, location: @creditcard

@@ -16,6 +16,7 @@ class BankinformationsController < ApplicationController
   # POST /bankinformations
   def create
     @bankinformation = Bankinformation.new(bankinformation_params)
+    @bankinformation.user_id = params[:user_id]
 
     if @bankinformation.save
       render json: @bankinformation, status: :created, location: @bankinformation
