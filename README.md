@@ -1,24 +1,16 @@
-# README
+#Track-Me
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#Purpose:
+To be able to keep track of Your Financial Activities and Records on your Day to Day Activities.
 
-Things you may want to cover:
+#Technologies used:
+React, Postgres, Ant-Design Reach Framework, External API(https://iexcloud.io/)
 
-* Ruby version
+#Back-End Relationship:
+One to Many
 
-* System dependencies
+#User stories:
+* User should be able to see stocks price, forex-Exchange prices, Crypto-currency Exchange.
 
-* Configuration
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
